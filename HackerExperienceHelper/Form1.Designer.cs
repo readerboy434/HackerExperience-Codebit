@@ -100,6 +100,7 @@
             this.NewIP.TabIndex = 7;
             this.NewIP.Text = "New IP";
             this.NewIP.UseVisualStyleBackColor = true;
+            this.NewIP.Click += new System.EventHandler(this.NewIP_Click);
             // 
             // NewBank
             // 
@@ -109,6 +110,7 @@
             this.NewBank.TabIndex = 8;
             this.NewBank.Text = "New Bank Account";
             this.NewBank.UseVisualStyleBackColor = true;
+            this.NewBank.Click += new System.EventHandler(this.NewBank_Click);
             // 
             // NewBTC
             // 
@@ -118,6 +120,7 @@
             this.NewBTC.TabIndex = 9;
             this.NewBTC.Text = "New Bitcoin Address";
             this.NewBTC.UseVisualStyleBackColor = true;
+            this.NewBTC.Click += new System.EventHandler(this.NewBTC_Click);
             // 
             // NotesBox
             // 

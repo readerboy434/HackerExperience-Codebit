@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.IPLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IPTextBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,12 +44,12 @@
             this.IPLabel.TabIndex = 0;
             this.IPLabel.Text = "IP:";
             // 
-            // textBox1
+            // IPTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.IPTextBox.Location = new System.Drawing.Point(38, 6);
+            this.IPTextBox.Name = "IPTextBox";
+            this.IPTextBox.Size = new System.Drawing.Size(100, 20);
+            this.IPTextBox.TabIndex = 1;
             // 
             // NameLabel
             // 
@@ -60,12 +60,12 @@
             this.NameLabel.TabIndex = 2;
             this.NameLabel.Text = "Name:";
             // 
-            // textBox2
+            // NameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(188, 6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 20);
-            this.textBox2.TabIndex = 3;
+            this.NameTextBox.Location = new System.Drawing.Point(188, 6);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(209, 20);
+            this.NameTextBox.TabIndex = 3;
             // 
             // AddButton
             // 
@@ -75,6 +75,7 @@
             this.AddButton.TabIndex = 4;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // NewIP
             // 
@@ -82,9 +83,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 33);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.NameLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IPTextBox);
             this.Controls.Add(this.IPLabel);
             this.MaximumSize = new System.Drawing.Size(505, 72);
             this.MinimizeBox = false;
@@ -99,9 +100,9 @@
         #endregion
 
         private System.Windows.Forms.Label IPLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IPTextBox;
         private System.Windows.Forms.Label NameLabel;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Button AddButton;
     }
 }
