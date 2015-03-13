@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace HackerExperienceHelper
 {
-    public partial class MainForm : Form
+    public partial class NewBank : Form
     {
-        public MainForm()
+        public NewBank()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace HackerExperienceHelper
 {
-    public partial class MainForm : Form
+    public partial class NewIP : Form
     {
-        public MainForm()
+        public NewIP()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
