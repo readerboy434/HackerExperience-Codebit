@@ -32,8 +32,8 @@ namespace HackerExperienceHelper
                 ToAddBank.Number = Convert.ToString(AccountNumberTextBox.Text);
                 ToAddBank.IP = Convert.ToString(BankIPTextBox.Text);
 
-                var IPFinal = JsonConvert.SerializeObject(ToAddBank, Formatting.Indented);
-                File.WriteAllText("Banks.json", IPFinal);
+                var BankFinal = JsonConvert.SerializeObject(ToAddBank, Formatting.Indented);
+                File.WriteAllText("Banks.json", BankFinal);
 
                 this.Close();
             }
