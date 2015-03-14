@@ -12,7 +12,6 @@ namespace HackerExperienceHelper
 {
     public partial class NewBank : Form
     {
-        public static Dictionary<string, string> Banks;
         public NewBank()
         {
             InitializeComponent();
@@ -32,8 +31,16 @@ namespace HackerExperienceHelper
                 ToAddBank.Number = Convert.ToString(AccountNumberTextBox.Text);
                 ToAddBank.IP = Convert.ToString(BankIPTextBox.Text);
 
-                var BankFinal = JsonConvert.SerializeObject(ToAddBank, Formatting.Indented);
-                File.WriteAllText("Banks.json", BankFinal);
+                using (FileStream fs = File.Open(@"Banks.json", FileMode.Append))
+                using (StreamWriter sw = new StreamWriter(fs))
+                using (JsonWriter jw = new JsonTextWriter(sw))
+                {
+                    jw.Formatting = Formatting.Indented;
+
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(jw, ToAddBank);
+                    sw.WriteLine("");
+                }
 
                 this.Close();
             }

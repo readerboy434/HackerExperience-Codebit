@@ -12,7 +12,6 @@ namespace HackerExperienceHelper
 {
     public partial class NewIP : Form
     {
-        public static Dictionary<string, string> IPs;
         public NewIP()
         {
             InitializeComponent();
@@ -33,8 +32,16 @@ namespace HackerExperienceHelper
                 ToAddIP.IP = Convert.ToString(IPTextBox.Text);
                 ToAddIP.Name = Convert.ToString(NameTextBox.Text);
 
-                var IPFinal = JsonConvert.SerializeObject(ToAddIP, Formatting.Indented);
-                File.WriteAllText("IPs.json", IPFinal);
+                using (FileStream fs = File.Open(@"IPs.json", FileMode.Append))
+                using (StreamWriter sw = new StreamWriter(fs))
+                using (JsonWriter jw = new JsonTextWriter(sw))
+                {
+                    jw.Formatting = Formatting.Indented;
+
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(jw, ToAddIP);
+                    sw.WriteLine("");
+                }
 
                 this.Close();
             }
