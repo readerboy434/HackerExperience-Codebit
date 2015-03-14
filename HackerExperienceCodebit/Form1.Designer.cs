@@ -159,8 +159,7 @@
             this.MaximumSize = new System.Drawing.Size(879, 679);
             this.MinimumSize = new System.Drawing.Size(879, 679);
             this.Name = "MainForm";
-            this.Text = "Hacker Experience Helper";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Hacker Experience Codebit";
             this.ResumeLayout(false);
             this.PerformLayout();
 
