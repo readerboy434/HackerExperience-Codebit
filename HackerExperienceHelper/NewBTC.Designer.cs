@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.PublicTextBox = new System.Windows.Forms.TextBox();
+            this.PrivateTextBox = new System.Windows.Forms.TextBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,19 +53,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Private Key:";
             // 
-            // textBox1
+            // PublicTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 20);
-            this.textBox1.TabIndex = 2;
+            this.PublicTextBox.Location = new System.Drawing.Point(78, 6);
+            this.PublicTextBox.Name = "PublicTextBox";
+            this.PublicTextBox.Size = new System.Drawing.Size(251, 20);
+            this.PublicTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // PrivateTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(402, 6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 20);
-            this.textBox2.TabIndex = 3;
+            this.PrivateTextBox.Location = new System.Drawing.Point(402, 6);
+            this.PrivateTextBox.Name = "PrivateTextBox";
+            this.PrivateTextBox.Size = new System.Drawing.Size(250, 20);
+            this.PrivateTextBox.TabIndex = 3;
             // 
             // AddButton
             // 
@@ -75,6 +75,7 @@
             this.AddButton.TabIndex = 4;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // NewBTC
             // 
@@ -82,8 +83,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 33);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PrivateTextBox);
+            this.Controls.Add(this.PublicTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(754, 72);
@@ -100,8 +101,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PublicTextBox;
+        private System.Windows.Forms.TextBox PrivateTextBox;
         private System.Windows.Forms.Button AddButton;
     }
 }
